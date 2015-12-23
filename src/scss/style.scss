@@ -1,0 +1,225 @@
+@import "variables.scss"; 
+    
+
+body{
+    
+    width: $width-body;   
+    margin: 0 auto;
+    
+}
+
+.clearfix:after{
+
+    display: table;
+    clear: both;
+    content: '';    
+        
+}
+
+.layout{
+    
+    width: $width-layout;
+    margin:0 215px;
+
+        
+}
+
+
+/* иконки */
+
+@mixin icon-size($width:0, $height:0){
+    
+    display: inline-block;
+    vertical-align: top;
+    
+    width: $width;
+    height: $height;
+    background-size: $width $height;
+    content: '';
+    padding-right: 8px;
+    
+}
+
+.icon{
+    
+    &-user:before{
+
+        background: url(../img/icon-user.png) 0 0 no-repeat;
+        @include icon-size(24px, 24px);         
+        
+    }
+    
+    &-phone:before{
+
+        background: url(../img/icon-phone.png) 0 0 no-repeat;
+        @include icon-size(24px, 24px);         
+        
+    }
+    
+    &-search:before{
+        
+        position: absolute;
+        content: '';
+        background: url(../img/icon-search.png) 0 0 no-repeat;
+        @include icon-size(19px, 18px);
+        top: 13px;
+        right: 13px;
+        z-index: 100;            
+        
+    }
+    
+}
+
+/*  ----  */
+
+.header{
+   
+    background-color: $color-gray-light;
+    
+    font: normal #{$font-size}/#{$line-height} $font-family;
+    color: $color-gray;
+    
+}
+
+.top{
+    
+    padding: 22px 0;
+
+    
+    ul{
+        
+        list-style-type: none;
+        margin:0;
+        padding: 0;
+        
+    }
+    
+    li{
+        
+        display: inline-block;
+        
+    }
+    
+    li:first-of-type a{
+        
+        font-weight: 700;
+        
+    }
+    
+    a{
+        
+        font: normal #{$font-size}/#{$line-height} $font-family;
+        color: $color-gray;
+        text-decoration: none;
+        
+    }
+    
+    &__left{
+        
+        float: left;
+        
+    }
+    
+    &__right{
+        
+        float: right;
+        
+    }
+
+}
+
+.menu{
+    
+    border: 1px solid transparent;   
+    letter-spacing:  0.1em;
+    
+    
+    
+    font: normal #{$font-size+1}/#{$line-height*2-2} $font-family;
+    color: $color-gray;
+    
+    span{        
+
+        padding: 5px 3px;
+        
+    }
+    
+    
+    &__left{
+        
+        float: left;
+        padding-top: 53px;
+        
+    }
+    
+    &__right{
+        
+        float: right;
+        padding-top: 31px;
+    }
+    
+    &__register{
+        
+        background: $color-yellow;
+        color: $color-white;
+        font-weight: 700;        
+        
+    }
+    
+    &__phone{
+        
+        font: normal #{$font-size+6}/#{$line-height+5} $font-family;        
+        color: $color-gray;
+
+    }
+    
+    &__search{
+        
+         position: relative;  
+        
+    }
+    
+    &__search input[type="text"]{
+        
+        padding: 14.5px 17px;
+        width: 258px;   
+        border: 1px solid $color-gray-lighter;
+        font-weight: 600;
+        
+    }
+
+    
+    &__content{      
+        
+    }
+    
+}
+
+.cart{
+    
+    text-transform: uppercase;
+    width: 420px;
+    outline: 1px solid red;
+    
+    &__wishlist{
+        
+        padding: 16.5px 0;
+        padding-left: 79px;
+        padding-right:24px;
+        width: 76px;
+        float:left;
+        
+    }
+    
+    &__shopping{
+     
+        width: 171px;
+        padding: 16.5px 0;
+        padding-left:45px;
+        padding-right: 21px;
+        float: right;
+        
+    }
+    
+    
+}
