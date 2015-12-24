@@ -64,7 +64,30 @@ body{
         @include icon-size(19px, 18px);
         top: 13px;
         right: 13px;
-        z-index: 100;            
+    
+        
+    }
+    
+    
+    &-heart:before{
+
+        background: url(../img/icon-heart.png) 0 0 no-repeat;
+        @include icon-size(22px, 20px);  
+        position: absolute;
+        content: '';                
+        left: 51px;
+        
+    }
+    
+        
+    &-cart:before{
+
+        background: url(../img/icon-cart.png) 0 0 no-repeat;
+        @include icon-size(23px, 20px);  
+        position: absolute;
+        content: '';                
+        left: 17px;
+        
         
     }
     
@@ -198,28 +221,82 @@ body{
 .cart{
     
     text-transform: uppercase;
-    width: 420px;
-    outline: 1px solid red;
+    width: 420px;    
+    line-height: 22px;
     
     &__wishlist{
         
         padding: 16.5px 0;
         padding-left: 79px;
         padding-right:24px;
-        width: 76px;
+        width: 77px;
         float:left;
+        position: relative;
+        border-right: 1px solid $color-gray-lighter;
+        border-bottom: 1px solid $color-gray-lighter;
+
         
     }
     
     &__shopping{
      
-        width: 171px;
+        width: 172px;
         padding: 16.5px 0;
         padding-left:45px;
         padding-right: 21px;
         float: right;
+        position: relative;
+        border-top: 1px solid $color-gray-lighter;
+        border-right: 1px solid $color-gray-lighter;        
         
     }
     
+    &__summa{
+        
+        color:$color-red;
+        font-weight: 700;
+        
+    }
+    
+    &__special{
+        
+        width:16px;
+        height: 12px;
+        padding: 3px 0;
+        padding-left:2px;
+        display: inline-block;
+        position: absolute;
+        top:0;
+        left:0;
+        background-color: $color-red;
+        border-radius: 50%;
+        color: $color-white;
+        font-weight: 700;
+        text-align: center;
+        line-height: 12px;
+        vertical-align: middle;        
+        
+    }
+    
+    &__left{
+        
+        float: left;        
+        
+    }
+        
+    &__right{
+        
+        float:right;
+        
+    }
+}
+
+.single-cart{
+    
+    &__size{
+        
+        
+        
+    }
     
 }

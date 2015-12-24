@@ -24,13 +24,13 @@ module.exports = {
         ]
     },
     
-        styles: {
+    jade: {
         files: [
             'src/jade/*.jade'
         ],
         tasks: [
             'jade'
         ]
-    },
+    }
     
 };
