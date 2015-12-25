@@ -15,7 +15,7 @@ module.exports =  {
     watch: {
       sass: {
         files: ['src/scss/**/*.{scss,sass}','src/scss/_partials/**/*.{scss,sass}'],
-        tasks: ['sass:dist', 'autoprefixer']
+        tasks: ['sass:src', 'autoprefixer']
       },
       livereload: {
         files: ['*.html', '*.php', 'js/**/*.{js,json}', 'css/*.css','img/**/*.{png,jpg,jpeg,gif,webp,svg}'],

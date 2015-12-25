@@ -5,6 +5,7 @@ html
         link(href="css/normalize.css" rel="stylesheet")
         link(href="css/style.css" rel="stylesheet")
         link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet" type="text/css")
+        <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700' rel='stylesheet' type='text/css'>
     body
         
         div.top.clearfix
@@ -24,9 +25,15 @@ html
                             a(href="#") IDR
         header.header.clearfix
             div.layout
+                div.logo 
+                    h1.logo__header Your Logo
+                    h1.logo__content ecommerce
+                    div.logo__line
+                    div.logo__line
+                    div.logo__line
+                    div.logo__line
                 div.header__content
-                    div.logo
-                    nav.menu
+                    nav.menu.clearfix
                         div.menu__left 
                             p.menu__content  <i class="icon-user"></i> HELLO, YOU CAN <b>LOGIN</b> OR 
                                 span.menu__register REGISTER
@@ -34,7 +41,7 @@ html
                                 span.menu__phone +88 888 888 888
                             div.menu__search
                                 i.icon-search
-                                input(type="text" placeholder="SEARCH")                                
+                                input(type="text" placeholder="SEARCH")                             
                         div.menu__right  
                             div.cart                    
                                 div.cart__items.clearfix
@@ -44,22 +51,61 @@ html
                                         div.cart__special  2
                                 div.cart__items.clearfix
                                     div.cart__left
-                                        div.cart-single.clearfix
-                                            div.cart-single__size 50x50
-                                            div.cart-single__column
-                                                div.cart-single__header flat shoes
-                                                div.cart-single__price $189.00
+                                        a(href="#")
+                                            div.cart-single.clearfix
+                                                div.cart-single__size 
+                                                    img(src="img/img_size.jpg" width="50" height="50" alt="flat shoes")
+                                                div.cart-single__column
+                                                    div.cart-single__header flat shoes
+                                                    div.cart-single__price $189.00
+                                                div.cart__close
+                                                    a(href="#" alt="close")
+                                                        i.icon-close
                                     div.cart__right.clearfix
-                                            div.cart-single__size 50x50
+                                        a(href="#")
+                                            div.cart-single__size 
+                                                img(src="img/img_size.jpg" width="50" height="50" alt="flat shoes")
                                             div.cart-single__column
                                                 div.cart-single__header hot pants
                                                 div.cart-single__price $156.00
+                                            div.cart__close
+                                                a(href="#" alt="close")
+                                                    i.icon-close
                                 div.cart__items.clearfix
-                                    div.cart__show-all
-                                    div.cart__check-out
-                                
-                    div.header__categories                
-                        
+                                    div.cart__show-all SHOW ALL PRODUCTS
+                                        i.icon-plus
+                                    div.cart__check-out CHECK OUT
+                                        i.icon-checkout                                
+                    nav.categories.clearfix 
+                       -cats = ["JACKETS", "SWEATERS", "DRESSES", "SKIRTS", "PANTS", "SHORTS", "SHOES", "ACCESSORIES"]                    
+                       ul
+                           each cat in cats
+                               li #{cat}
         main
+            div.blocks
+                div.layout.clearfix
+                    div.blocks__column1.clearfix
+                        img(src="img/img_may_collection.jpg" width="287" height="680" alt="may collection")
+                        div.block-col1
+                            h3.block-col1__header MAY
+                            div.block-col1__content Collection
+                            a(href="#").btn See products
+                            
+                    div.blocks__column2
+                        div.blocks__column21.clearfix     
+                            div.blocks__column211     
+                                img(src="img/img_fashion.jpg" width="567" height="362")
+                            div.blocks__column212.clearfix                                
+                                img(src="img/img_vero_moda.jpg" width="290" height="362")
+                                div.block-col2
+                                    div.block-col2__content New
+                                    div.block-col2__header Arrivals
+                                    a(href="#").btn See products
+                        div.blocks__column22.clearfix
+                            div.blocks__column221     
+                                img(src="img/img_black_bag_fashion.jpg" width="283" height="297")
+                            div.blocks__column222                                
+                                img(src="img/img_fashionable_shoes.jpg" width="571" height="297")
+                        
         footer
         

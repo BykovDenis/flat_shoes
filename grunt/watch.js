@@ -31,6 +31,16 @@ module.exports = {
         tasks: [
             'jade'
         ]
+    },
+    
+    autoprefixer: {
+        files: [
+            'src/css/*.css'
+        ],
+        tasks: [
+            'autoprefixer'
+        ]
+        
     }
     
 };

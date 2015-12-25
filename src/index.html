@@ -4,7 +4,7 @@
     <title>Flat shoes</title>
     <link href="css/normalize.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet" type="text/css"/><link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div class="top clearfix">
@@ -25,9 +25,16 @@
     </div>
     <header class="header clearfix">
       <div class="layout">
+        <div class="logo"> 
+          <h1 class="logo__header">Your Logo</h1>
+          <h1 class="logo__content">ecommerce</h1>
+          <div class="logo__line"></div>
+          <div class="logo__line"></div>
+          <div class="logo__line"></div>
+          <div class="logo__line"></div>
+        </div>
         <div class="header__content">
-          <div class="logo"></div>
-          <nav class="menu">
+          <nav class="menu clearfix">
             <div class="menu__left"> 
               <p class="menu__content"> <i class="icon-user"></i> HELLO, YOU CAN <b>LOGIN</b> OR <span class="menu__register">REGISTER</span></p>
               <p class="menu__content"><i class="icon-phone"></i> Customer Service : <span class="menu__phone">+88 888 888 888</span></p>
@@ -44,35 +51,72 @@
                   </div>
                 </div>
                 <div class="cart__items clearfix">
-                  <div class="cart__left">
-                    <div class="cart-single clearfix">
-                      <div class="cart-single__size">50x50</div>
+                  <div class="cart__left"><a href="#">
+                      <div class="cart-single clearfix">
+                        <div class="cart-single__size"> <img src="img/img_size.jpg" width="50" height="50" alt="flat shoes"/></div>
+                        <div class="cart-single__column">
+                          <div class="cart-single__header">flat shoes</div>
+                          <div class="cart-single__price">$189.00</div>
+                        </div>
+                        <div class="cart__close"><a href="#" alt="close"><i class="icon-close"></i></a></div>
+                      </div></a></div>
+                  <div class="cart__right clearfix"><a href="#">
+                      <div class="cart-single__size"> <img src="img/img_size.jpg" width="50" height="50" alt="flat shoes"/></div>
                       <div class="cart-single__column">
-                        <div class="cart-single__header">flat shoes</div>
-                        <div class="cart-single__price">$189.00</div>
+                        <div class="cart-single__header">hot pants</div>
+                        <div class="cart-single__price">$156.00</div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="cart__right clearfix">
-                    <div class="cart-single__size">50x50</div>
-                    <div class="cart-single__column">
-                      <div class="cart-single__header">hot pants</div>
-                      <div class="cart-single__price">$156.00</div>
-                    </div>
-                  </div>
+                      <div class="cart__close"><a href="#" alt="close"><i class="icon-close"></i></a></div></a></div>
                 </div>
                 <div class="cart__items clearfix">
-                  <div class="cart__show-all"></div>
-                  <div class="cart__check-out"></div>
+                  <div class="cart__show-all">SHOW ALL PRODUCTS<i class="icon-plus"></i></div>
+                  <div class="cart__check-out">CHECK OUT<i class="icon-checkout">                               </i></div>
                 </div>
               </div>
             </div>
           </nav>
-          <div class="header__categories">               </div>
+          <nav class="categories clearfix"> 
+            <ul>
+              <li>JACKETS</li>
+              <li>SWEATERS</li>
+              <li>DRESSES</li>
+              <li>SKIRTS</li>
+              <li>PANTS</li>
+              <li>SHORTS</li>
+              <li>SHOES</li>
+              <li>ACCESSORIES</li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
-    <main></main>
+    <main>
+      <div class="blocks">
+        <div class="layout clearfix">
+          <div class="blocks__column1 clearfix"><img src="img/img_may_collection.jpg" width="287" height="680" alt="may collection"/>
+            <div class="block-col1">
+              <h3 class="block-col1__header">MAY</h3>
+              <div class="block-col1__content">Collection</div><a href="#" class="btn">See products</a>
+            </div>
+          </div>
+          <div class="blocks__column2">
+            <div class="blocks__column21 clearfix">    
+              <div class="blocks__column211">    <img src="img/img_fashion.jpg" width="567" height="362"/></div>
+              <div class="blocks__column212 clearfix">                               <img src="img/img_vero_moda.jpg" width="290" height="362"/>
+                <div class="block-col2">
+                  <div class="block-col2__content">New</div>
+                  <div class="block-col2__header">Arrivals</div><a href="#" class="btn">See products</a>
+                </div>
+              </div>
+            </div>
+            <div class="blocks__column22 clearfix">
+              <div class="blocks__column221">    <img src="img/img_black_bag_fashion.jpg" width="283" height="297"/></div>
+              <div class="blocks__column222">                               <img src="img/img_fashionable_shoes.jpg" width="571" height="297"/></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer></footer>
   </body>
 </html>
