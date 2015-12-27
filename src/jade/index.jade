@@ -116,7 +116,7 @@ html
                             i.icon-arrowdown
                         p.products__text "Whoever said money can't buy happiness simply didn't know WHERE TO SHOP"
                                         
-                    -products = [{name:"BLAZER SLIMFIT",filename:"img/img_photo11.jpg"},{name:"SLIM PANTS",filename:"img/img_photo12.jpg"},{name:"SWEATSHIRT",filename:"img/img_photo13.jpg"}, {name:"FORMAL BLOUSE",filename:"img/img_photo14.jpg"},{name:"WOMEN ARMY PANTS",filename:"img/img_photo21.jpg"},{name:"SUMMER PANTS",filename:"img/img_photo22.jpg", price_old: "$329.00"},{name:"COLLAR CHIFFON",filename:"img/img_photo23.jpg"}]
+                    -products = [{name:"BLAZER SLIMFIT",filename:"img/img_photo11.jpg"},{name:"SLIM PANTS",filename:"img/img_photo12.jpg"},{name:"SWEATSHIRT",filename:"img/img_photo13.jpg"}, {name:"FORMAL BLOUSE",filename:"img/img_photo14.jpg"},{name:"WOMEN ARMY PANTS",filename:"img/img_photo21.jpg"},{name:"SUMMER PANTS",filename:"img/img_photo22.jpg", price_old: "$329.00"},{name:"COLLAR CHIFFON",filename:"img/img_photo23.jpg"},{name:"SLIM JEANS",filename:"img/img_photo24.jpg"}]
                     
                     div.products__content                    
                         each product in products 
@@ -130,18 +130,61 @@ html
                                 
                                 div.product__price
                                     if product.price_old
-                                        span.product__price-old #{product.price_old}                          
+                                        span.product__price-old #{product.price_old}                         
                                     
-                                    $279,00                                        
-                        div.product
-                            div.product__photo
-                                img(src="img/img_photo24.jpg" width="285" height="300" alt="SLIM JEANS")
-                                img(src="img/bg_placehold.png" width="285" height="300" alt="SLIM JEANS").product__placeholder
-                            div.product__divider
-                            div.product__name SLIM JEANS 
-                            div.product__price $279.00
-                               
-
+                                    $279,00   
+                                div.product-selected
+                                    div.product-selected__prev                                    
+                                        a(href="")
+                                            i.icon-arrowleft
+                                    div.product-selected__next   
+                                        a(href="")
+                                            i.icon-arrowright                                            
+                                    a(href="#").product-selected__addtocart add to cart
+                                    div.product-selected__wishlist
+                                        a(href="#") <i class="icon-heart"></i> add to wishlist
+                    div.products__more 
+                        a(href="#") <i class="icon-plus-black"></i> LOAD MORE PRODUCTS
+            div.choose-category
+                div.layout.clearfix
+                    h3.choose-category__header CATEGORY
+                    div.choose-category__nav
+                        -cats = [{name:"JACKETS",url:"#"},{name:"T-SHIRTS",url:"#"},{name:"SKIRTS",url:"#"},{name:"PANTS",url:"#"},{name:"SHOES",url:"#"},{name:"ACCESSORIES",url:"#"}]
+                        ul
+                            each cat in cats
+                                li
+                                    a(href="#{cat.url}") #{cat.name}
                         
-        footer
+            div.latest-viewed
+                div.layout.clearfix
+                    h4.latest-viewed__header LATEST VIEWED
+                  
+                    -products1 = [{name:"T-SHIRT BLUE",filename:"img/img_photo31.jpg"},{name:"BASIC T-SHIRT",filename:"img/img_photo32.jpg",price_old:"$329.00"},{name:"COLLAR VERTICAL STRIPES",filename:"img/img_photo33.jpg"},{name:"COLOR SHIRT",filename:"img/img_photo34.jpg"},{name:"VERY ELEGANT SHIRT",filename:"img/img_photo35.jpg"}] 
+                
+                    div.latest-viewed__content 
+                        each product1 in products1
+                            div.product.product--mini
+                                div.product__photo--mini
+                                    img(src="#{product1.filename}" width="228" height="238" alt="#{product1.name}")
+                                    img(src="img/bg_placehold2.png" width="228" height="238" alt="#{product1.name}").product__placeholder
+                                div.product__divider--mini
+                                div.product__name--mini #{product1.name}
+
+
+                                div.product__price
+                                    if product1.price_old
+                                        span.product__price-old #{product1.price_old}                         
+
+                                    $279,00       
+                          
+                        
+        footer.main-footer
+            div.layout.cleafix            
+                div.logo.logo--yellow
+                    h1.logo__header Your Logo
+                    h1.logo__content ecommerce
+                    div.logo__line
+                    div.logo__line
+                    div.logo__line
+                    div.logo__line
         
