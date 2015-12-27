@@ -1,8 +1,17 @@
 $width-body: 1600px;
 $width-layout: 1180px;
 
-$font-family: 'Source Sans Pro',sans-serif;
-$font-family-josefin: 'Josefin Sans',sans-serif;
+/*$font-family: 'Source Sans Pro',sans-serif;*/
+
+$font-family-SourceSansProRegular: 'Source Sans Pro Regular',sans-serif;
+$font-family-SourceSansProBold: 'Source Sans Pro Bold',sans-serif;
+$font-family-SourceSansProSemibold: 'Source Sans Semibold',sans-serif;
+$font-family-SourceSansProLight: 'Source Sans Light',sans-serif;
+$font-family-SourceSansProLightItalic: 'Source Sans LightItalic',sans-serif;
+
+/*$font-family-josefin: 'Josefin Sans',sans-serif; */
+
+$font-family-JosefinBold:'Josefin Sans Bold';
 
 
 $color-white: #ffffff;
@@ -30,6 +39,7 @@ $color-gray-dark: #383739;
 $color-yellow: #e1bc62;
 $color-red: #cd222a;
 $color-black: #444444; 
+$color-black-dark2: #1a1a1a;
 $color-black-dark: #000000; 
     
     

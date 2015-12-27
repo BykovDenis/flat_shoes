@@ -1,10 +1,78 @@
 @import "variables.scss"; 
+
+@font-face{
+    
+    font-family: "Source Sans Pro Regular";
+    src: url("../fonts/SourceSansPro-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+@font-face{
+    
+    font-family: "Source Sans Pro Bold";
+    src: url("../fonts/SourceSansPro-Bold.ttf");
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+@font-face{
+    
+    font-family: "Source Sans Pro Semibold";
+    src: url("../fonts/SourceSansPro-Semibold.ttf");
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+
+@font-face{
+    
+    font-family: "Source Sans Pro Light";
+    src: url("../fonts/SourceSansPro-Light.ttf");
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+@font-face{
+    
+    font-family: "Source Sans Pro Bold";
+    src: url("../fonts/SourceSansPro-Bold.ttf");
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+
+@font-face{
+    
+    font-family: "Source Sans Pro LightItalic";
+    src: url("../fonts/SourceSansPro-LightItalic.ttf");
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+@font-face{
+    
+    font-family: "Josefin Sans Bold";
+    src: url("../fonts/JosefinSans-Bold.ttf");
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
     
 
 body{
     
     width: $width-body;   
     margin: 0 auto;
+    background-color: $color-gray-light;
+
     
 }
 
@@ -19,8 +87,7 @@ body{
 .layout{
     
     width: $width-layout;
-    margin:0 215px;
-
+    margin:0 210px;
         
 }
 
@@ -36,7 +103,7 @@ body{
     height: $height;
     background-size: $width $height;
     content: '';
-    padding-right: 8px;
+
     
 }
 
@@ -45,14 +112,16 @@ body{
     &-user:before{
 
         background: url(../img/icon-user.png) 0 0 no-repeat;
-        @include icon-size(24px, 24px);         
+        @include icon-size(20px, 22px);   
+        margin-right: 11px;
         
     }
     
     &-phone:before{
 
         background: url(../img/icon-phone.png) 0 0 no-repeat;
-        @include icon-size(24px, 24px);         
+        @include icon-size(24px, 24px);  
+        margin-right: 11px;
         
     }
     
@@ -121,6 +190,17 @@ body{
         
     }       
     
+    &-arrowdown:before{
+
+        background: url(../img/icon-arrowdown.png) 0 42px no-repeat;
+        @include icon-size(18px, 11px);                  
+        content: '';      
+        padding: 18.5px 0;
+        height: 42px;
+        margin-left: 15px;
+        
+    }      
+    
 }
 
 /*  ----  */
@@ -129,7 +209,7 @@ body{
    
     background-color: $color-gray-light;
     
-    font: normal #{$font-size}/#{$line-height} $font-family;
+    font: 400 #{$font-size}/#{$line-height} $font-family-SourceSansProRegular;
     color: $color-gray;
     padding-bottom: 20px;    
     
@@ -162,7 +242,7 @@ body{
     
     a{
         
-        font: normal #{$font-size}/#{$line-height} $font-family;
+        font: 400 #{$font-size}/#{$line-height} $font-family-SourceSansProRegular;
         color: $color-gray;
         text-decoration: none;
         
@@ -200,14 +280,14 @@ body{
     
     &__header{
         
-        font: 700 #{$font-size-h1}/#{$line-height-h1} $font-family-josefin;    
+        font: 700 #{$font-size-h1}/#{$line-height-h1} $font-family-JosefinBold;    
         margin: 0;        
         
     }
         
     &__content{
 
-        font: 700 8.15px/11.66px $font-family-josefin;  
+        font: 700 8.15px/11.66px $font-family-JosefinBold;  
         margin: 0;
         text-transform: uppercase;             
         
@@ -264,12 +344,12 @@ body{
     
     
     
-    font: normal #{$font-size+1}/#{$line-height*2-2} $font-family;
+    font: 400 #{$font-size+1}/#{$line-height*2-2} $font-family-SourceSansProRegular;
     color: $color-gray;
     
     span{        
 
-        padding: 5px 3px;
+        padding: 2.5px 3px;
         
     }
     
@@ -277,14 +357,14 @@ body{
     &__left{
         
         float: left;
-        padding-top: 53px;
+        padding-top: 30px;
         
     }
     
     &__right{
         
         float: right;
-        padding-top: 31px;
+        padding-top: 25px;
     }
     
     &__register{
@@ -297,7 +377,7 @@ body{
     
     &__phone{
         
-        font: normal #{$font-size+6}/#{$line-height+5} $font-family;        
+        font: 400 #{$font-size+6}/#{$line-height+5} $font-family-SourceSansProRegular;        
         color: $color-gray;
 
     }
@@ -338,7 +418,8 @@ body{
     
     &__wishlist{
         
-        padding: 16.5px 0;
+        padding-top: 14.32px;
+        padding-bottom: 7.68px;
         padding-left: 79px;
         padding-right:24px;
         width: 77px;
@@ -353,7 +434,8 @@ body{
     &__shopping{
      
         width: 172px;
-        padding: 16.5px 0;
+        padding-top: 14.32px;
+        padding-bottom: 7.68px;
         padding-left:45px;
         padding-right: 21px;
         float: right;
@@ -435,7 +517,7 @@ body{
         
         color: $color-white;
         text-transform: uppercase;
-        font: 700 #{$font-size+2px}/#{$line-height+11px} $font-family; 
+        font: 700 #{$font-size+2px}/#{$line-height+11px} $font-family-SourceSansProBold; 
         letter-spacing: 0.05em;
         
     }
@@ -480,7 +562,7 @@ body{
         float: left;
         padding: 20.5px 0;
         padding-right: 15px;
-        font: bold #{$font-size}/#{$line-height+5px} $font-family;
+        font: 700 #{$font-size}/#{$line-height+5px} $font-family-SourceSansProBold;
         position: relative;
         
     }
@@ -501,15 +583,21 @@ body{
     
     margin: 0 auto;
     border-bottom: 5px solid $color-yellow;
+    
+    ul{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
         
     li{
         
         display: inline-block;
         vertical-align: top;
         
-        font: 600 #{$font-size+3px}/#{$line-height+5px} $font-family;
+        font: 600 #{$font-size+3px}/#{$line-height+5px} $font-family-SourceSansProSemibold;
         color: $color-black;
-        margin-right: 56px;
+        margin-right: 50px;
         padding: 16.5px 0;
         
     }
@@ -522,8 +610,6 @@ body{
 }
 
 .blocks{
-    
-    margin-bottom: 85px;
     
     &__column1{
         
@@ -596,11 +682,11 @@ body{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top:380px;
+    top:386px;
     
     &__header{
         
-        font: 700 #{$font-size-h3}/#{$line-height-h3} $font-family;
+        font: 700 #{$font-size-h3}/#{$line-height-h3} $font-family-SourceSansProBold;
         color: $color-black-dark;
         text-transform: uppercase;
         letter-spacing: 0.1em;
@@ -611,7 +697,7 @@ body{
     
     &__content{
         
-        font: 300 #{$font-size+6px}/#{$line-height+5px} $font-family;
+        font: 300 #{$font-size+6px}/#{$line-height+5px} $font-family-SourceSansProLight;
         color: $color-black-dark;
         
         letter-spacing: 0.6em;
@@ -629,12 +715,12 @@ body{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top:115px;
+    top:110px;
     text-transform: uppercase;  
     
     &__header{
         
-        font: 700 #{$font-size-h2}/#{$line-height-h2} $font-family;
+        font: 700 #{$font-size-h2}/#{$line-height-h2} $font-family-SourceSansProBold;
         color: $color-black-dark;
               
         text-align: center;
@@ -645,7 +731,7 @@ body{
     
     &__content{
         
-        font: 300 #{$font-size+7px}/#{$line-height+11px} $font-family;
+        font: 300 #{$font-size+7px}/#{$line-height+11px} $font-family-SourceSansProLight;
         color: $color-black-dark;
         
         letter-spacing: 0.9em;
@@ -658,13 +744,11 @@ body{
 
 }
 
-
-
 .btn{
     
     display: block;
     text-decoration: none;
-    font: 700 #{$font-size+2px}/#{$line-height+11px} $font-family;
+    font: 700 #{$font-size+2px}/#{$line-height+11px} $font-family-SourceSansProBold;
     color: $color-white;
     letter-spacing: 0.05em;
     text-align: center;
@@ -672,6 +756,146 @@ body{
     width: 180px;
     background-color: $color-yellow;
     margin: 0 auto;
+    
+    
+}
+
+.products{
+    
+    
+    
+    &__header{
+        
+        margin: 38.5px auto;
+        text-align: center;        
+        
+    }
+    
+    &__content{
+        
+        font-size: 0;
+        
+    }
+    
+    a{
+        
+        text-decoration: none;
+        margin-bottom: 31px;
+        
+    }
+    
+    h2{
+        
+        font: 400 #{$font-size-h2}/#{$line-height-h2 - 24px} $font-family-SourceSansProRegular;
+        color: $color-black-dark2;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        display: inline-block;        
+        
+    }
+    
+    &__header--active{
+        
+        font-weight: 700 !important;
+        
+    }
+    
+    &__text{
+        
+        font: 300 #{$font-size + 2px}/#{$line-height - 1px} $font-family-SourceSansProLightItalic;
+        font-style: italic;
+        color: $color-gray;
+        
+    }
+    
+    &__separate{
+        
+        height: 35px;
+        width: 2px;
+        
+        margin:28px 30px;
+        padding:0;
+            
+        display: inline-block;
+        vertical-align: top;
+        
+        background-color: #e1e1e1;
+        
+        
+    }
+    
+}
+
+.product{
+    
+    display: inline-block;
+    position: relative;
+    padding-bottom: 45px;
+    margin-right: 13.3px;   
+    
+        
+    &:nth-of-type(4n){
+        
+        margin-right: 0;
+        
+    }
+        
+    &__photo{
+                
+        width: 285px;
+        height: 300px;  
+        margin-bottom: 5px;
+        
+    }
+    
+    
+    &__placeholder{
+        
+        position: absolute;
+        display: inline-block;
+        vertical-align: top;
+        top:0;
+        left:0;
+        
+    }
+    
+    &__name{
+        
+        font: 600 #{$font-size + 6px}/#{$line-height + 11px} $font-family-SourceSansProSemibold;
+        color: $color-gray;
+        text-transform: uppercase;
+        text-align: center; 
+        margin: 0 auto;
+        
+    }
+    
+    &__divider{
+        
+        width: 45px;
+        height: 2px;
+        background-color: #cdcdcd;
+        margin: 0 auto;
+        margin-bottom: 39px;
+        
+        
+    }
+    
+    &__price{
+    
+    
+        font: 100 #{$font-size + 6px}/#{$line-height + 11px} $font-family-SourceSansProLight;
+        color: $color-gray;
+        text-transform: uppercase;
+        text-align: center;   
+        
+    }
+    
+    &__price-old{
+        
+        text-decoration: line-through;
+        font: 100 #{$font-size + 2px}/#{$line-height + 11px} $font-family-SourceSansProLight;
+        
+    }
     
     
 }

@@ -1,7 +1,52 @@
 @charset "UTF-8";
+/*$font-family: 'Source Sans Pro',sans-serif;*/
+/*$font-family-josefin: 'Josefin Sans',sans-serif; */
+@font-face {
+  font-family: "Source Sans Pro Regular";
+  src: url("../fonts/SourceSansPro-Regular.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Source Sans Pro Bold";
+  src: url("../fonts/SourceSansPro-Bold.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Source Sans Pro Semibold";
+  src: url("../fonts/SourceSansPro-Semibold.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Source Sans Pro Light";
+  src: url("../fonts/SourceSansPro-Light.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Source Sans Pro Bold";
+  src: url("../fonts/SourceSansPro-Bold.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Source Sans Pro LightItalic";
+  src: url("../fonts/SourceSansPro-LightItalic.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Josefin Sans Bold";
+  src: url("../fonts/JosefinSans-Bold.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   width: 1600px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background-color: #fbfbfb; }
 
 .clearfix:after {
   display: table;
@@ -10,18 +55,18 @@ body {
 
 .layout {
   width: 1180px;
-  margin: 0 215px; }
+  margin: 0 210px; }
 
 /* иконки */
 .icon-user:before {
   background: url(../img/icon-user.png) 0 0 no-repeat;
   display: inline-block;
   vertical-align: top;
-  width: 24px;
-  height: 24px;
-  background-size: 24px 24px;
+  width: 20px;
+  height: 22px;
+  background-size: 20px 22px;
   content: '';
-  padding-right: 8px; }
+  margin-right: 11px; }
 
 .icon-phone:before {
   background: url(../img/icon-phone.png) 0 0 no-repeat;
@@ -31,7 +76,7 @@ body {
   height: 24px;
   background-size: 24px 24px;
   content: '';
-  padding-right: 8px; }
+  margin-right: 11px; }
 
 .icon-search:before {
   position: absolute;
@@ -43,7 +88,6 @@ body {
   height: 18px;
   background-size: 19px 18px;
   content: '';
-  padding-right: 8px;
   top: 13px;
   right: 13px; }
 
@@ -55,7 +99,6 @@ body {
   height: 20px;
   background-size: 22px 20px;
   content: '';
-  padding-right: 8px;
   position: absolute;
   content: '';
   left: 51px;
@@ -69,7 +112,6 @@ body {
   height: 23px;
   background-size: 18px 23px;
   content: '';
-  padding-right: 8px;
   position: absolute;
   content: '';
   left: 22px;
@@ -82,8 +124,7 @@ body {
   width: 10px;
   height: 11px;
   background-size: 10px 11px;
-  content: '';
-  padding-right: 8px; }
+  content: ''; }
 
 .icon-plus:before {
   background: url(../img/icon-plus.png) 0 0 no-repeat;
@@ -93,7 +134,6 @@ body {
   height: 13px;
   background-size: 13px 13px;
   content: '';
-  padding-right: 8px;
   position: absolute;
   content: '';
   left: 48px;
@@ -107,16 +147,28 @@ body {
   height: 21px;
   background-size: 21px 21px;
   content: '';
-  padding-right: 8px;
   position: absolute;
   content: '';
   left: 27px;
   top: 6px; }
 
+.icon-arrowdown:before {
+  background: url(../img/icon-arrowdown.png) 0 42px no-repeat;
+  display: inline-block;
+  vertical-align: top;
+  width: 18px;
+  height: 11px;
+  background-size: 18px 11px;
+  content: '';
+  content: '';
+  padding: 18.5px 0;
+  height: 42px;
+  margin-left: 15px; }
+
 /*  ----  */
 .header {
   background-color: #fbfbfb;
-  font: normal 12px / 13px "Source Sans Pro", sans-serif;
+  font: 400 12px / 13px "Source Sans Pro Regular", sans-serif;
   color: #595959;
   padding-bottom: 20px; }
 
@@ -131,7 +183,7 @@ body {
   .top li:first-of-type a {
     font-weight: 700; }
   .top a {
-    font: normal 12px / 13px "Source Sans Pro", sans-serif;
+    font: 400 12px / 13px "Source Sans Pro Regular", sans-serif;
     color: #595959;
     text-decoration: none; }
   .top__left {
@@ -153,10 +205,10 @@ body {
   text-align: center;
   padding: 66.5px 0; }
   .logo__header {
-    font: 700 23.32px / 29.15px "Josefin Sans", sans-serif;
+    font: 700 23.32px / 29.15px "Josefin Sans Bold";
     margin: 0; }
   .logo__content {
-    font: 700 8.15px/11.66px "Josefin Sans", sans-serif;
+    font: 700 8.15px/11.66px "Josefin Sans Bold";
     margin: 0;
     text-transform: uppercase; }
   .logo__line {
@@ -184,22 +236,22 @@ body {
 .menu {
   border: 1px solid transparent;
   letter-spacing: 0.1em;
-  font: normal 13px / 24px "Source Sans Pro", sans-serif;
+  font: 400 13px / 24px "Source Sans Pro Regular", sans-serif;
   color: #595959; }
   .menu span {
-    padding: 5px 3px; }
+    padding: 2.5px 3px; }
   .menu__left {
     float: left;
-    padding-top: 53px; }
+    padding-top: 30px; }
   .menu__right {
     float: right;
-    padding-top: 31px; }
+    padding-top: 25px; }
   .menu__register {
     background: #e1bc62;
     color: #ffffff;
     font-weight: 700; }
   .menu__phone {
-    font: normal 18px / 18px "Source Sans Pro", sans-serif;
+    font: 400 18px / 18px "Source Sans Pro Regular", sans-serif;
     color: #595959; }
   .menu__search {
     position: relative; }
@@ -216,7 +268,8 @@ body {
   .cart a {
     color: #595959; }
   .cart__wishlist {
-    padding: 16.5px 0;
+    padding-top: 14.32px;
+    padding-bottom: 7.68px;
     padding-left: 79px;
     padding-right: 24px;
     width: 77px;
@@ -226,7 +279,8 @@ body {
     border-bottom: 1px solid #dfdfdf; }
   .cart__shopping {
     width: 172px;
-    padding: 16.5px 0;
+    padding-top: 14.32px;
+    padding-bottom: 7.68px;
     padding-left: 45px;
     padding-right: 21px;
     float: right;
@@ -271,7 +325,7 @@ body {
   .cart__items:last-of-type {
     color: #ffffff;
     text-transform: uppercase;
-    font: 700 14px / 24px "Source Sans Pro", sans-serif;
+    font: 700 14px / 24px "Source Sans Pro Bold", sans-serif;
     letter-spacing: 0.05em; }
   .cart .cart__show-all {
     float: left;
@@ -295,7 +349,7 @@ body {
   float: left;
   padding: 20.5px 0;
   padding-right: 15px;
-  font: bold 12px / 18px "Source Sans Pro", sans-serif;
+  font: 700 12px / 18px "Source Sans Pro Bold", sans-serif;
   position: relative; }
 
 .cart-single__size img {
@@ -308,58 +362,68 @@ body {
 .categories {
   margin: 0 auto;
   border-bottom: 5px solid #e1bc62; }
+  .categories ul {
+    margin: 0;
+    padding: 0;
+    text-align: center; }
   .categories li {
     display: inline-block;
     vertical-align: top;
-    font: 600 15px / 18px "Source Sans Pro", sans-serif;
+    font: 600 15px / 18px "Source Sans Semibold", sans-serif;
     color: #444444;
-    margin-right: 56px;
+    margin-right: 50px;
     padding: 16.5px 0; }
   .categories li:last-of-type {
     margin-right: 0; }
 
-.blocks {
-  margin-bottom: 85px; }
-  .blocks__column1 {
-    position: relative;
-    float: left; }
-  .blocks__column1 img {
-    width: 287px;
-    height: 680px;
-    -webkit-filter: contrast(40%) brightness(140%);
-    filter: contrast(40%) brightness(140%); }
-  .blocks__column2 {
-    float: right; }
-  .blocks__column21 {
-    margin-bottom: 21px; }
-  .blocks__column211 {
-    float: left;
-    margin-right: 20px; }
-  .blocks__column221 {
-    float: left;
-    margin-right: 20px; }
-  .blocks__column212, .blocks__column222 {
-    float: right; }
-  .blocks__column212 {
-    position: relative; }
-  .blocks__column212 img {
-    -webkit-filter: contrast(40%) brightness(140%);
-    filter: contrast(40%) brightness(140%); }
+.blocks__column1 {
+  position: relative;
+  float: left; }
+
+.blocks__column1 img {
+  width: 287px;
+  height: 680px;
+  -webkit-filter: contrast(40%) brightness(140%);
+  filter: contrast(40%) brightness(140%); }
+
+.blocks__column2 {
+  float: right; }
+
+.blocks__column21 {
+  margin-bottom: 21px; }
+
+.blocks__column211 {
+  float: left;
+  margin-right: 20px; }
+
+.blocks__column221 {
+  float: left;
+  margin-right: 20px; }
+
+.blocks__column212, .blocks__column222 {
+  float: right; }
+
+.blocks__column212 {
+  position: relative; }
+
+.blocks__column212 img {
+  -webkit-filter: contrast(40%) brightness(140%);
+  filter: contrast(40%) brightness(140%); }
 
 .block-col1 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 380px; }
+  top: 386px; }
   .block-col1__header {
-    font: 700 30px / 30px "Source Sans Pro", sans-serif;
+    font: 700 30px / 30px "Source Sans Pro Bold", sans-serif;
     color: #000000;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-align: center;
     margin: 0; }
   .block-col1__content {
-    font: 300 18px / 18px "Source Sans Pro", sans-serif;
+    font: 300 18px / 18px "Source Sans Light", sans-serif;
     color: #000000;
     letter-spacing: 0.6em;
     text-align: center;
@@ -370,16 +434,16 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 115px;
+  top: 110px;
   text-transform: uppercase; }
   .block-col2__header {
-    font: 700 48px / 36px "Source Sans Pro", sans-serif;
+    font: 700 48px / 36px "Source Sans Pro Bold", sans-serif;
     color: #000000;
     text-align: center;
     margin: 0;
     margin-bottom: 17px; }
   .block-col2__content {
-    font: 300 19px / 24px "Source Sans Pro", sans-serif;
+    font: 300 19px / 24px "Source Sans Light", sans-serif;
     color: #000000;
     letter-spacing: 0.9em;
     text-align: center;
@@ -388,7 +452,7 @@ body {
 .btn {
   display: block;
   text-decoration: none;
-  font: 700 14px / 24px "Source Sans Pro", sans-serif;
+  font: 700 14px / 24px "Source Sans Pro Bold", sans-serif;
   color: #ffffff;
   letter-spacing: 0.05em;
   text-align: center;
@@ -396,5 +460,78 @@ body {
   width: 180px;
   background-color: #e1bc62;
   margin: 0 auto; }
+
+.products__header {
+  margin: 38.5px auto;
+  text-align: center; }
+
+.products__content {
+  font-size: 0; }
+
+.products a {
+  text-decoration: none;
+  margin-bottom: 31px; }
+
+.products h2 {
+  font: 400 48px / 12px "Source Sans Pro Regular", sans-serif;
+  color: #1a1a1a;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: inline-block; }
+
+.products__header--active {
+  font-weight: 700 !important; }
+
+.products__text {
+  font: 300 14px / 12px "Source Sans LightItalic", sans-serif;
+  font-style: italic;
+  color: #595959; }
+
+.products__separate {
+  height: 35px;
+  width: 2px;
+  margin: 28px 30px;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #e1e1e1; }
+
+.product {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 45px;
+  margin-right: 13.3px; }
+  .product:nth-of-type(4n) {
+    margin-right: 0; }
+  .product__photo {
+    width: 285px;
+    height: 300px;
+    margin-bottom: 5px; }
+  .product__placeholder {
+    position: absolute;
+    display: inline-block;
+    vertical-align: top;
+    top: 0;
+    left: 0; }
+  .product__name {
+    font: 600 18px / 24px "Source Sans Semibold", sans-serif;
+    color: #595959;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto; }
+  .product__divider {
+    width: 45px;
+    height: 2px;
+    background-color: #cdcdcd;
+    margin: 0 auto;
+    margin-bottom: 39px; }
+  .product__price {
+    font: 100 18px / 24px "Source Sans Light", sans-serif;
+    color: #595959;
+    text-transform: uppercase;
+    text-align: center; }
+  .product__price-old {
+    text-decoration: line-through;
+    font: 100 14px / 24px "Source Sans Light", sans-serif; }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,8 +4,6 @@ html
         title Flat shoes
         link(href="css/normalize.css" rel="stylesheet")
         link(href="css/style.css" rel="stylesheet")
-        link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet" type="text/css")
-        <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700' rel='stylesheet' type='text/css'>
     body
         
         div.top.clearfix
@@ -106,6 +104,44 @@ html
                                 img(src="img/img_black_bag_fashion.jpg" width="283" height="297")
                             div.blocks__column222                                
                                 img(src="img/img_fashionable_shoes.jpg" width="571" height="297")
+            section.products
+                div.layout.clearfix
+                    header.products__header
+                        a(href="#" alt="FEATURED") 
+                            h2.products__header--active FEATURED                        
+                            i.icon-arrowdown
+                        div.products__separate
+                        a(href="#" alt="FEATURED")
+                            h2 ARRIVALS                        
+                            i.icon-arrowdown
+                        p.products__text "Whoever said money can't buy happiness simply didn't know WHERE TO SHOP"
+                                        
+                    -products = [{name:"BLAZER SLIMFIT",filename:"img/img_photo11.jpg"},{name:"SLIM PANTS",filename:"img/img_photo12.jpg"},{name:"SWEATSHIRT",filename:"img/img_photo13.jpg"}, {name:"FORMAL BLOUSE",filename:"img/img_photo14.jpg"},{name:"WOMEN ARMY PANTS",filename:"img/img_photo21.jpg"},{name:"SUMMER PANTS",filename:"img/img_photo22.jpg", price_old: "$329.00"},{name:"COLLAR CHIFFON",filename:"img/img_photo23.jpg"}]
+                    
+                    div.products__content                    
+                        each product in products 
+                            div.product
+                                div.product__photo
+                                    img(src="#{product.filename}" width="285" height="300" alt="#{product.name}")
+                                    img(src="img/bg_placehold.png" width="285" height="300" alt="#{product.name}").product__placeholder
+                                div.product__divider
+                                div.product__name #{product.name}
+                                
+                                
+                                div.product__price
+                                    if product.price_old
+                                        span.product__price-old #{product.price_old}                          
+                                    
+                                    $279,00                                        
+                        div.product
+                            div.product__photo
+                                img(src="img/img_photo24.jpg" width="285" height="300" alt="SLIM JEANS")
+                                img(src="img/bg_placehold.png" width="285" height="300" alt="SLIM JEANS").product__placeholder
+                            div.product__divider
+                            div.product__name SLIM JEANS 
+                            div.product__price $279.00
+                               
+
                         
         footer
         
