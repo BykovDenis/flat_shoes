@@ -56,7 +56,7 @@ html
                                                 div.cart-single__column
                                                     div.cart-single__header flat shoes
                                                     div.cart-single__price $189.00
-                                                div.cart__close
+                                                div.cart-single__close
                                                     a(href="#" alt="close")
                                                         i.icon-close
                                     div.cart__right.clearfix
@@ -66,7 +66,7 @@ html
                                             div.cart-single__column
                                                 div.cart-single__header hot pants
                                                 div.cart-single__price $156.00
-                                            div.cart__close
+                                            div.cart-single__close
                                                 a(href="#" alt="close")
                                                     i.icon-close
                                 div.cart__items.clearfix
@@ -131,7 +131,7 @@ html
                                 
                                 div.product__price
                                     if product.price_old
-                                        span.product__price-old #{product.price_old}                         
+                                        span.product__price-old #{product.price_old}                        
                                     
                                     $279,00   
                                 div.product-selected
@@ -188,4 +188,70 @@ html
                     div.logo__line
                     div.logo__line
                     div.logo__line
+                div.main-footer__column
+                    h5.main-footer__header CONNECT WITH US
+                    p.main-footer__name DAVELYNINC - ECOMMERCE
+                    p.main-footer__content. 
+                        Kebon jeruk, Jakarta, ID 
+                        <br>
+                        +88  888 888 888
+                        <br>
+                        fashionholic@davelyn.com
+
+                div.main-footer__column
+                    h5.main-footer__header HOLIDAY SALES
+                    div.cart-single.clearfix
+                        a(href="#")
+                            div.cart-single__size--large 
+                                img(src="img/img_size75.jpg" width="75" height="75" alt="flat shoes")
+                            div.cart-single__column--large
+                                div.single__header--large CHANEL - FASHION BAG
+                                div.cart-single__price--large $189.00
+                    div.cart-single.clearfix
+                        a(href="#")
+                            div.cart-single__size--large 
+                                img(src="img/img_size75.jpg" width="75" height="75" alt="flat shoes")
+                            div.cart-single__column--large
+                                div.single__header--large GUCCI - FASHION BAG
+
+                                div.cart-single__price--large  
+                                    span.cart-single__price-old $220.00
+                                    $189.00
+
+
+                div.main-footer__column
+                    h5.main-footer__header NEW ARRIVALS
+                    div.cart-single.clearfix
+                        a(href="#")
+                            div.cart-single__size--large 
+                                img(src="img/img_size75.jpg" width="75" height="75" alt="flat shoes")
+                            div.cart-single__column--large
+                                div.cart-single__header--large CALVIN KLEIN - LOW SLIM JEANS
+                                div.cart-single__price--large 
+                                    span.cart-single__price-old $220.00
+                                    $189.00     
+                    div.cart-single.clearfix
+                        a(href="#")
+                            div.cart-single__size--large 
+                                img(src="img/img_size75.jpg" width="75" height="75" alt="flat shoes")
+                            div.cart-single__column--large
+                                div.single__header--large VICTORIA S - LINGERIE
+                                div.cart-single__price--large  
+                                    span.cart-single__price-old $220.00
+                                    $189.00                
+
+                div.main-footer__column
+                    h5.main-footer__header OUR SUPPORT
+
+                    -supports = [{name:"- Terms &\ Conditions"},{name:"- Delivery"},{name:"- Secure Payment"},{name:"- Refunds"},{name:"- Track Orders"}]
+
+                    ul.main-footer__list
+                        each support in supports
+                            li #{support.name}
+
+                div.payment-methods
+                
+                
+                            
+                
         
