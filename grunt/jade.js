@@ -14,7 +14,7 @@ module.exports = {
             expand: true,
             cwd: 'src/jade',
             src: '**/*.jade',
-            dest: 'src/',
+            dest: 'dest/',
             ext: '.html'
         }]
     }

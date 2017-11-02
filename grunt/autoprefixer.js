@@ -1,15 +1,11 @@
 module.exports =  {
     // Development settings
- 
-    
-  
-  
     autoprefixer: {
       options: {
         browsers: ['last 30 versions']
       },
       files: {
-        'src/css/style.css': 'src/css/style.css'
+        'dest/css/style.css': 'dest/css/style.css'
       }
     },
     watch: {
@@ -18,13 +14,13 @@ module.exports =  {
         tasks: ['sass:src', 'autoprefixer']
       },
       livereload: {
-        files: ['*.html', '*.php', 'js/**/*.{js,json}', 'css/*.css','img/**/*.{png,jpg,jpeg,gif,webp,svg}'],
+        files: ['dest/*.html', '*.php', 'dest/js/**/*.{js,json}', 'dest/css/*.css','dest/img/**/*.{png,jpg,jpeg,gif,webp,svg}'],
         options: {
           livereload: true
         }
       }
     }
 
-    
+
 
 };

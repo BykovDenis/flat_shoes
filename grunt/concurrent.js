@@ -1,32 +1,33 @@
 module.exports = {
-
-    // Опции
+    // пїЅпїЅпїЅпїЅпїЅ
     options: {
         limit: 3
     },
-
-    // Задачи разработки
+    // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     devFirst: [
         'clean',
+        'jade',
         'jshint'
     ],
     devSecond: [
         'sass:dev',
-        'uglify'
+        'uglify',
     ],
-
-    // Производственные задачи
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     prodFirst: [
         'clean',
+        'jade',
         'jshint'
     ],
     prodSecond: [
         'sass:prod',
-        'uglify'
+        'uglify',
     ],
-
-    // Задачи изображений
+    // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     imgFirst: [
         'imagemin'
-    ]
+    ],
+    serve: [
+        'browserSync'
+    ],
 };

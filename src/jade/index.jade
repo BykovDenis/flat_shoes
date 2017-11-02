@@ -5,25 +5,25 @@ html
         link(href="css/normalize.css" rel="stylesheet")
         link(href="css/style.css" rel="stylesheet")
     body
-        
+
         div.top.clearfix
             div.layout
-            
-                div.top__left 
+
+                div.top__left
                     ul
-                        li 
+                        li
                             a(href="#") ENG
-                        li 
+                        li
                             a(href="#") IND
                 div.top__right
                     ul
-                        li 
+                        li
                             a(href="#") USD
-                        li 
+                        li
                             a(href="#") IDR
         header.header.clearfix
             div.layout
-                div.logo 
+                div.logo
                     h1.logo__header Your Logo
                     h1.logo__content ecommerce
                     div.logo__line
@@ -32,16 +32,16 @@ html
                     div.logo__line
                 div.header__content
                     nav.menu.clearfix
-                        div.menu__left 
-                            p.menu__content  <i class="icon-user"></i> HELLO, YOU CAN <b>LOGIN</b> OR 
+                        div.menu__left
+                            p.menu__content  <i class="icon-user"></i> HELLO, YOU CAN <b>LOGIN</b> OR
                                 span.menu__register REGISTER
-                            p.menu__content <i class="icon-phone"></i> Customer Service : 
+                            p.menu__content <i class="icon-phone"></i> Customer Service :
                                 span.menu__phone +88 888 888 888
                             div.menu__search
                                 i.icon-search
-                                input(type="text" placeholder="SEARCH")                             
-                        div.menu__right  
-                            div.cart                    
+                                input(type="text" placeholder="SEARCH")
+                        div.menu__right
+                            div.cart
                                 div.cart__items.clearfix
                                     div.cart__wishlist <i class="icon-heart"></i> wishlist
                                     div.cart__shopping <i class="icon-cart"></i> shopping cart:
@@ -51,7 +51,7 @@ html
                                     div.cart__left
                                         a(href="#")
                                             div.cart-single.clearfix
-                                                div.cart-single__size 
+                                                div.cart-single__size
                                                     img(src="img/img_size.jpg" width="50" height="50" alt="flat shoes")
                                                 div.cart-single__column
                                                     div.cart-single__header flat shoes
@@ -61,7 +61,7 @@ html
                                                         i.icon-close
                                     div.cart__right.clearfix
                                         a(href="#")
-                                            div.cart-single__size 
+                                            div.cart-single__size
                                                 img(src="img/img_size.jpg" width="50" height="50" alt="flat shoes")
                                             div.cart-single__column
                                                 div.cart-single__header hot pants
@@ -73,12 +73,12 @@ html
                                     div.cart__show-all SHOW ALL PRODUCTS
                                         i.icon-plus
                                     div.cart__check-out CHECK OUT
-                                        i.icon-checkout                                
-                    nav.categories.clearfix 
-                       -cats = ["JACKETS", "SWEATERS", "DRESSES", "SKIRTS", "PANTS", "SHORTS", "SHOES", "ACCESSORIES"]                    
+                                        i.icon-checkout
+                    nav.categories.clearfix
+                       -cats = ["JACKETS", "SWEATERS", "DRESSES", "SKIRTS", "PANTS", "SHORTS", "SHOES", "ACCESSORIES"]
                        ul
                            each cat in cats
-                               li 
+                               li
                                    a(href="#") #{cat}
         main
             div.blocks
@@ -89,62 +89,61 @@ html
                             h3.block-col1__header MAY
                             div.block-col1__content Collection
                             a(href="#").btn See products
-                            
+
                     div.blocks__column2
-                        div.blocks__column21.clearfix     
-                            div.blocks__column211     
+                        div.blocks__column21.clearfix
+                            div.blocks__column211
                                 img(src="img/img_fashion.jpg" width="567" height="362")
-                            div.blocks__column212.clearfix                                
+                            div.blocks__column212.clearfix
                                 img(src="img/img_vero_moda.jpg" width="290" height="362")
                                 div.block-col2
                                     div.block-col2__content New
                                     div.block-col2__header Arrivals
                                     a(href="#").btn See products
                         div.blocks__column22.clearfix
-                            div.blocks__column221     
+                            div.blocks__column221
                                 img(src="img/img_black_bag_fashion.jpg" width="283" height="297")
-                            div.blocks__column222                                
+                            div.blocks__column222
                                 img(src="img/img_fashionable_shoes.jpg" width="571" height="297")
             section.products
                 div.layout.clearfix
                     header.products__header
-                        a(href="#" alt="FEATURED") 
-                            h2.products__header--active FEATURED                        
+                        a(href="#" alt="FEATURED")
+                            h2.products__header--active FEATURED
                             i.icon-arrowdown
                         div.products__separate
                         a(href="#" alt="FEATURED")
-                            h2 ARRIVALS                        
+                            h2 ARRIVALS
                             i.icon-arrowdown
                         p.products__text "Whoever said money can't buy happiness simply didn't know WHERE TO SHOP"
-                                        
+
                     -products = [{name:"BLAZER SLIMFIT",filename:"img/img_photo11.jpg"},{name:"SLIM PANTS",filename:"img/img_photo12.jpg"},{name:"SWEATSHIRT",filename:"img/img_photo13.jpg"}, {name:"FORMAL BLOUSE",filename:"img/img_photo14.jpg"},{name:"WOMEN ARMY PANTS",filename:"img/img_photo21.jpg"},{name:"SUMMER PANTS",filename:"img/img_photo22.jpg", price_old: "$329.00"},{name:"COLLAR CHIFFON",filename:"img/img_photo23.jpg"},{name:"SLIM JEANS",filename:"img/img_photo24.jpg"}]
-                    
-                    div.products__content                    
-                        each product in products 
+
+                    div.products__content
+                        each product in products
                             div.product
                                 div.product__photo
                                     img(src="#{product.filename}" width="285" height="300" alt="#{product.name}")
                                     img(src="img/bg_placehold.png" width="285" height="300" alt="#{product.name}").product__placeholder
                                 div.product__divider
                                 div.product__name #{product.name}
-                                
-                                
+
+
                                 div.product__price
                                     if product.price_old
-                                        span.product__price-old #{product.price_old}                        
-                                    
-                                    $279,00   
+                                        span.product__price-old #{product.price_old}
+                                    $279,00
                                 div.product-selected
-                                    div.product-selected__prev                                    
+                                    div.product-selected__prev
                                         a(href="")
                                             i.icon-arrowleft
-                                    div.product-selected__next   
+                                    div.product-selected__next
                                         a(href="")
-                                            i.icon-arrowright                                            
+                                            i.icon-arrowright
                                     a(href="#").product-selected__addtocart add to cart
                                     div.product-selected__wishlist
                                         a(href="#") <i class="icon-heart"></i> add to wishlist
-                    div.products__more 
+                    div.products__more
                         a(href="#") <i class="icon-plus-black"></i> LOAD MORE PRODUCTS
             div.choose-category
                 div.layout.clearfix
@@ -155,14 +154,14 @@ html
                             each cat in cats
                                 li
                                     a(href="#{cat.url}") #{cat.name}
-                        
+
             div.latest-viewed
                 div.layout.clearfix
                     h4.latest-viewed__header LATEST VIEWED
-                  
-                    -products1 = [{name:"T-SHIRT BLUE",filename:"img/img_photo31.jpg"},{name:"BASIC T-SHIRT",filename:"img/img_photo32.jpg",price_old:"$329.00"},{name:"COLLAR VERTICAL STRIPES",filename:"img/img_photo33.jpg"},{name:"COLOR SHIRT",filename:"img/img_photo34.jpg"},{name:"VERY ELEGANT SHIRT",filename:"img/img_photo35.jpg"}] 
-                
-                    div.latest-viewed__content 
+
+                    -products1 = [{name:"T-SHIRT BLUE",filename:"img/img_photo31.jpg"},{name:"BASIC T-SHIRT",filename:"img/img_photo32.jpg",price_old:"$329.00"},{name:"COLLAR VERTICAL STRIPES",filename:"img/img_photo33.jpg"},{name:"COLOR SHIRT",filename:"img/img_photo34.jpg"},{name:"VERY ELEGANT SHIRT",filename:"img/img_photo35.jpg"}]
+
+                    div.latest-viewed__content
                         each product1 in products1
                             div.product.product--mini
                                 div.product__photo--mini
@@ -174,13 +173,11 @@ html
 
                                 div.product__price
                                     if product1.price_old
-                                        span.product__price-old #{product1.price_old}                         
+                                        span.product__price-old #{product1.price_old}
 
-                                    $279,00       
-                          
-                        
+                                    $279,00
         footer.main-footer
-            div.layout.cleafix            
+            div.layout.cleafix
                 div.logo.logo--yellow
                     h1.logo__header Your Logo
                     h1.logo__content ecommerce
@@ -191,8 +188,8 @@ html
                 div.main-footer__column
                     h5.main-footer__header CONNECT WITH US
                     p.main-footer__name DAVELYNINC - ECOMMERCE
-                    p.main-footer__content. 
-                        Kebon jeruk, Jakarta, ID 
+                    p.main-footer__content.
+                        Kebon jeruk, Jakarta, ID
                         <br>
                         +88  888 888 888
                         <br>
@@ -202,47 +199,45 @@ html
                     h5.main-footer__header HOLIDAY SALES
                     div.cart-single.clearfix
                         a(href="#")
-                            div.cart-single__size--large 
+                            div.cart-single__size--large
                                 img(src="img/img_size75.jpg" width="75" height="75" alt="flat shoes")
                             div.cart-single__column--large
                                 div.single__header--large CHANEL - FASHION BAG
                                 div.cart-single__price--large $189.00
                     div.cart-single.clearfix
                         a(href="#")
-                            div.cart-single__size--large 
+                            div.cart-single__size--large
                                 img(src="img/img_size75.jpg" width="75" height="75" alt="flat shoes")
                             div.cart-single__column--large
                                 div.single__header--large GUCCI - FASHION BAG
 
-                                div.cart-single__price--large  
+                                div.cart-single__price--large
                                     span.cart-single__price-old $220.00
                                     $189.00
-
 
                 div.main-footer__column
                     h5.main-footer__header NEW ARRIVALS
                     div.cart-single.clearfix
                         a(href="#")
-                            div.cart-single__size--large 
+                            div.cart-single__size--large
                                 img(src="img/img_size75.jpg" width="75" height="75" alt="flat shoes")
                             div.cart-single__column--large
                                 div.cart-single__header--large CALVIN KLEIN - LOW SLIM JEANS
-                                div.cart-single__price--large 
+                                div.cart-single__price--large
                                     span.cart-single__price-old $220.00
-                                    $189.00     
+                                    $189.00
                     div.cart-single.clearfix
                         a(href="#")
-                            div.cart-single__size--large 
+                            div.cart-single__size--large
                                 img(src="img/img_size75.jpg" width="75" height="75" alt="flat shoes")
                             div.cart-single__column--large
                                 div.single__header--large VICTORIA S - LINGERIE
-                                div.cart-single__price--large  
+                                div.cart-single__price--large
                                     span.cart-single__price-old $220.00
-                                    $189.00                
+                                    $189.00
 
                 div.main-footer__column
                     h5.main-footer__header OUR SUPPORT
-
                     -supports = [{name:"- Terms &\ Conditions"},{name:"- Delivery"},{name:"- Secure Payment"},{name:"- Refunds"},{name:"- Track Orders"}]
 
                     ul.main-footer__list
@@ -250,8 +245,7 @@ html
                             li #{support.name}
 
                 div.payment-methods
-                
-                
-                            
-                
-        
+
+
+
+

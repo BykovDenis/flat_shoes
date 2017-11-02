@@ -1,33 +1,30 @@
 module.exports = {
     // Development settings
-    
- 
     dev: {
         options: {
-            outputStyle: 'nested',
-            sourceMap: true
+            style: 'nested',
+            sourcemap: true
         },
         files: [{
             expand: true,
             cwd: 'src/scss',
             src: ['*.scss'],
-            dest: 'src/css',
+            dest: 'dest/css',
             ext: '.css'
         }]
     },
     // Production settings
     prod: {
         options: {
-            outputStyle: 'compressed',            
-            sourceMap: false
+            style: 'compressed',
+            sourcemap: 'none'
         },
         files: [{
             expand: true,
             cwd: 'src/scss',
             src: ['*.scss'],
-            dest: 'src/css',
+            dest: 'dest/css',
             ext: '.css'
         }]
     }
-    
 };
