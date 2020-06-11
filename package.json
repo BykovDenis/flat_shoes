@@ -2,6 +2,10 @@
   "name": "flat-shoes",
   "version": "0.0.1",
   "description": "Flat shoes",
+  "scripts": {
+    "start": "grunt",
+    "build": "grunt prod"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^3.0.3",
@@ -19,5 +23,8 @@
     "grunt-contrib-sass": "^1.0.0",
     "jshint-stylish": "^2.2.1",
     "time-grunt": "^1.2.2"
+  },
+  "engines": {
+    "node": "8"
   }
 }
